@@ -275,6 +275,7 @@ a:hover {
 }
 .right-card {
   width: 33%;
+  height: 900px;
   position: sticky;
   top: 0px;
 }
@@ -1017,8 +1018,7 @@ input::placeholder {
   .btn1 {
     display: none;
   }
-  .mobile-icon
-  {
+  .mobile-icon {
     display: contents;
   }
 }
