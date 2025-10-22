@@ -1,0 +1,121 @@
+/* media quary */
+
+/* very small screen */
+@media screen  and (max-wdth:600) {
+    .vsm-25
+    {
+        width: 25%;
+    }
+    .vsm-33
+    {
+        width: 33.3%;
+    }
+    .vsm-50
+    {
+        width: 50%;
+    }
+    .vsm-100
+    {
+        width: 100%;
+    }
+    
+}
+/* small screen */
+@media screen  and (min-wdth:600) {
+    .sm-25
+    {
+        width: 25%;
+    }
+    .sm-33
+    {
+        width: 33.3%;
+    }
+    .sm-50
+    {
+        width: 50%;
+    }
+    .sm-100
+    {
+        width: 100%;
+    }
+    
+}
+/* medium screen */
+@media screen  and (min-wdth:768) {
+    .md-25
+    {
+        width: 25%;
+    }
+    .md-33
+    {
+        width: 33.3%;
+    }
+    .md-50
+    {
+        width: 50%;
+    }
+    .md-100
+    {
+        width: 100%;
+    }
+    
+}
+/* large screen */
+@media screen  and (min-wdth:992) {
+    .lg-25
+    {
+        width: 25%;
+    }
+    .lg-33
+    {
+        width: 33.3%;
+    }
+    .lg-50
+    {
+        width: 50%;
+    }
+    .lg-100
+    {
+        width: 100%;
+    }
+    
+}
+/* extre large screen */
+@media screen  and (min-wdth:1200) {
+    .xl-25
+    {
+        width: 25%;
+    }
+    .xl-33
+    {
+        width: 33.3%;
+    }
+    .xl-50
+    {
+        width: 50%;
+    }
+    .xl-100
+    {
+        width: 100%;
+    }
+    
+}
+@media screen  and (min-wdth:1400) {
+    .xxl-25
+    {
+        width: 25%;
+    }
+    .xxl-33
+    {
+        width: 33.3%;
+    }
+    .xxl-50
+    {
+        width: 50%;
+    }
+    .xxl-100
+    {
+        width: 100%;
+    }
+    
+}
