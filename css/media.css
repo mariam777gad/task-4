@@ -1,7 +1,7 @@
 /* media quary */
 
 /* very small screen */
-@media screen  and (max-wdth:600) {
+@media screen  and (max-width:600) {
     .vsm-25
     {
         width: 25%;
@@ -21,7 +21,7 @@
     
 }
 /* small screen */
-@media screen  and (min-wdth:600) {
+@media screen  and (min-width:600) {
     .sm-25
     {
         width: 25%;
@@ -41,7 +41,7 @@
     
 }
 /* medium screen */
-@media screen  and (min-wdth:768) {
+@media screen  and (min-width:768) {
     .md-25
     {
         width: 25%;
@@ -61,7 +61,7 @@
     
 }
 /* large screen */
-@media screen  and (min-wdth:992) {
+@media screen  and (min-width:992) {
     .lg-25
     {
         width: 25%;
@@ -81,7 +81,7 @@
     
 }
 /* extre large screen */
-@media screen  and (min-wdth:1200) {
+@media screen  and (min-width:1200) {
     .xl-25
     {
         width: 25%;
@@ -100,7 +100,7 @@
     }
     
 }
-@media screen  and (min-wdth:1400) {
+@media screen  and (min-width:1400) {
     .xxl-25
     {
         width: 25%;
