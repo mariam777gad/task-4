@@ -29,8 +29,7 @@
     <title>The UX Reviwe Blog</title>
   </head>
 
-  <body >
-
+  <body>
     <div class="section1" id="home">
       <div class="container">
         <div class="navebar">
@@ -51,8 +50,16 @@
           <div class="btn1">
             <button>SUBSCRIBE NOW</button>
           </div>
+          <div class="dark-light-mode-container ">
+            <label for="light"><i class="fa-solid fa-sun"></i></label>
+            <label for="light"><i class="fa-solid fa-moon"></i></label>
+            <input type="checkbox" hidden id="light" />
+          </div>
+
+          <!-- light / dark mode css -->
           <div class="mobile-icon">
-            <i class="fa-solid fa-list"></i>
+            <i class="fa-solid fa-list #light"></i>
+            <!-- <input type="checkbox" style="visibility: hidden;" id="light"> -->
           </div>
         </div>
       </div>
@@ -61,9 +68,9 @@
       <div class="square2"></div>
       <div class="square3"></div>
 
-      <div class="container">
+      <div class="container p-y">
         <div class="header">
-          <div class="header-contant lg-50">
+          <div class="header-contant md-100">
             <div class="trending-style">
               <p><i class="fa-solid fa-fire"></i>TRENDING NOW</p>
             </div>
@@ -87,7 +94,7 @@
               </button>
             </div>
           </div>
-          <div class="img-section  lg-50">
+          <div class="img-section md-100">
             <div class="header-featured"><p>FEATURED</p></div>
             <div class="header-img">
               <img
@@ -100,17 +107,16 @@
       </div>
     </div>
 
-
     <div class="section2 p-y" id="latest-articles">
       <div class="container">
         <div class="section-cards">
-          <div class="left-cards  md-100 ">
+          <div class="left-cards md-100">
             <div class="card-header">
               <h2>LATEST ARTICLES</h2>
               <p><i class="fa-solid fa-fire"></i>FRESH CONTENT</p>
             </div>
 
-            <div class="cards sm-100 md-100  xl-100">
+            <div class="cards sm-100 md-100 xl-100">
               <div class="card-img">
                 <img
                   src="images/user-engagement-2-DFdiyblT.jpg"
@@ -134,7 +140,7 @@
                 </div>
               </div>
             </div>
-            <div class="cards  sm-100 md-100 xl-100">
+            <div class="cards sm-100 md-100 xl-100">
               <div class="card-img">
                 <img
                   src="images/guide-to-typography-CNuK3VDW.avif"
@@ -157,7 +163,7 @@
                 </div>
               </div>
             </div>
-            <div class="cards sm-100 md-100  xl-100">
+            <div class="cards sm-100 md-100 xl-100">
               <div class="card-img">
                 <img
                   src="images/anti-instagram-Bn9b8TEi.jpg"
@@ -185,7 +191,7 @@
               <i class="fa-solid fa-plus"></i>LOAD MORE ARTICELS
             </button>
           </div>
-          <div class="right-card md-100 sm-100  md-100 ">
+          <div class="right-card md-100 sm-100 md-100">
             <div class="right-top-card">
               <h2>TRENDING NOW</h2>
               <div class="trending-card">
@@ -232,7 +238,7 @@
           <p>The rebels behind the brutal truth</p>
         </div>
         <div class="three-cards">
-          <div class="three-cards-contant card1 md-100 sm-50 md-50 lg-50 xl-33 ">
+          <div class="three-cards-contant card1 md-100 sm-50 md-50 lg-50 xl-33">
             <p class="founder">FOUNDER</p>
             <div class="three-cards-img">
               <img src="images/avatar-2 (1).jpg" alt="card image" />
@@ -249,7 +255,7 @@
               <li class="linkedin"><i class="fa-brands fa-linkedin"></i></li>
             </ul>
           </div>
-          <div class="three-cards-contant card2 md-100 sm-50 md-50 lg-50 xl-33 ">
+          <div class="three-cards-contant card2 md-100 sm-50 md-50 lg-50 xl-33">
             <p class="lead">LEAD</p>
             <div class="three-cards-img">
               <img src="images/avatar-2-CwUcGkzI.jpg" alt="card image" />
@@ -266,7 +272,7 @@
               <li class="linkedin"><i class="fa-brands fa-linkedin"></i></li>
             </ul>
           </div>
-          <div class="three-cards-contant card3 md-100 sm-50 md-50 lg-50 xl-33 ">
+          <div class="three-cards-contant card3 md-100 sm-50 md-50 lg-50 xl-33">
             <p class="viral">VIRAL</p>
             <div class="three-cards-img">
               <img src="images/avatar-8.jpg" alt="card image" />
@@ -294,7 +300,7 @@
         </div>
 
         <div class="two-cards">
-          <div class="right-card-section4 md-100 ">
+          <div class="right-card-section4 md-100">
             <h2>BECOME PART OF SOMETHING BIGGER</h2>
             <p class="main-p">
               Join thousands of designers, developers, and digital rebels who
@@ -323,7 +329,7 @@
               <i class="fa-solid fa-rocket"></i>JOIN NOW - ITS FREE
             </button>
           </div>
-          <div class="left-card-section4 md-100 ">
+          <div class="left-card-section4 md-100">
             <h2>WHAT REBELS ARE SAYING</h2>
             <div class="inner-cards color-card1">
               <p class="inner-p">
@@ -384,15 +390,12 @@
             </div>
           </div>
         </div>
-  
-
-        
       </div>
     </div>
-    <div class="footer p-y"> 
+    <div class="footer p-y design" id="design">
       <div class="container">
         <div class="footer-first-row">
-          <div class="footer-card1 sm-100 md-100 lg-50 xl-33  ">
+          <div class="footer-card1 md-100">
             <div class="footer-header">
               <i class="fa-solid fa-pen-nib"></i>
               <h2>THE UX REVIEW</h2>
@@ -402,19 +405,19 @@
               compromise, no corporate speak, just brutal truth that matters.
             </p>
           </div>
-          <div class="footer-card2  sm-100 md-50 lg-33 ">
+          <div class="footer-card2 md-50">
             <h3>CATEGORIES</h3>
             <div class="categories-list">
               <ul>
-                <li><a href="#home">TECH</a></li>
-                <li><a href="#">DESIGN</a></li>
-                <li><a href="#">CULTURE</a></li>
-                <li><a href="#">OPINION</a></li>
-                <li><a href="#">TUTORIALS</a></li>
+                <li><a href="#tech">TECH</a></li>
+                <li><a href="#design">DESIGN</a></li>
+                <li><a href="#culture">CULTURE</a></li>
+                <li><a href="#opinion">OPINION</a></li>
+                <li><a href="#tutorials">TUTORIALS</a></li>
               </ul>
             </div>
           </div>
-          <div class="footer-card3 sm-100 md-50 lg-33 ">
+          <div class="footer-card3 md-50">
             <h3>NEWSLETTER</h3>
             <p>
               Get brutal insights delivered weekly. No spam, just truth that
@@ -435,9 +438,5 @@
         </div>
       </div>
     </div>
-    <div class="test1">
-      <p>Lorem ipsum dolor sit.</p>
-    </div>
-    <p>l</p>
   </body>
 </html>

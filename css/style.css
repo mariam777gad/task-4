@@ -2,6 +2,11 @@
 * {
   box-sizing: border-box;
 }
+::selection
+{
+  background-color: orange;
+  color: black;
+}
 body {
   font-family: "Exo", sans-serif;
   margin: 0;
@@ -130,11 +135,15 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   position: relative;
+}
+.header-contant {
+  width: 50%;
 }
 .img-section {
   position: relative;
-  width: 45%;
+  width: 50%;
   display: flex;
   align-items: center;
 }
@@ -173,10 +182,6 @@ a:hover {
 .header-t p {
   padding: 10px;
 }
-.header-contant {
-  width: 55%;
-  margin-top: 100px;
-}
 
 .square1 {
   width: 120px;
@@ -207,7 +212,7 @@ a:hover {
 }
 .trending-style {
   text-align: center;
-  width: 25%;
+  width: 30%;
   transform: rotate(-5deg);
   box-shadow: 3px 3px #000000;
   font-size: 14px;
@@ -287,7 +292,7 @@ a:hover {
   width: 33%;
   position: sticky;
   top: 0px;
-  height: 800px;
+  height: 1000px;
   /* هنا لازم ندي height 
   ويكون اقل من ال heighgt بتاع ال parent بتاعه عشان يعمل scroll
   height right-card < height section-cards  */
@@ -1016,9 +1021,6 @@ input::placeholder {
   .md-100 {
     width: 100%;
   }
-  .width-100 {
-    width: 100%;
-  }
 
   .left-cards,
   .right-card {
@@ -1046,6 +1048,10 @@ input::placeholder {
   }
   .mobile-icon {
     display: block;
+    position: relative;
+  }
+  .mobile-icon input[type="checkbox"] {
+    position: absolute;
   }
   .mobile-icon i {
     width: 100%;
@@ -1053,19 +1059,20 @@ input::placeholder {
   .square2 {
     left: 50%;
   }
-  .img-section {
-    margin-bottom: 90px;
-  }
   .header-featured {
     top: 0;
     left: 70%;
   }
   .section3 .section-header::after {
     background-color: #2444ad;
+    top: 20%;
   }
   .section4 .section-header::after {
     background-color: #2444ad;
     top: 13%;
+  }
+  .square4 {
+    display: none;
   }
 }
 /* small screen */
@@ -1176,13 +1183,6 @@ input::placeholder {
   .xl-100 {
     width: 100%;
   }
-  .section3 .section-header::after {
-    background-color: #a43034;
-  }
-  .section4 .section-header::after {
-    background-color: #a43034;
-    top: 17%;
-  }
   .btn1 {
     display: block;
     display: flex;
@@ -1205,13 +1205,6 @@ input::placeholder {
   .xxl-100 {
     width: 100%;
   }
-  .section3 .section-header::after {
-    background-color: #51d556;
-    top: 25%;
-  }
-  .section4 .section-header::after {
-    background-color: #51d556;
-  }
   .btn1 {
     display: block;
     display: flex;
@@ -1222,7 +1215,39 @@ input::placeholder {
   }
 } */
 
+/* linkes target */
 
+body:has(#home:target) li a[href="#home"] {
+  color: orange;
+}
+body:has(#latest-articles:target) li a[href="#latest-articles"] {
+  color: orange;
+}
+body:has(#AUTHORS:target) li a[href="#AUTHORS"] {
+  color: orange;
+}
+body:has(#COMMUNITY:target) li a[href="#COMMUNITY"] {
+  color: orange;
+}
+
+/* footer target */
+body:has(#tech:target) a[href="#tech"] {
+  color: orange;
+}
+
+:target a[href="#design"] {
+  color: orange;
+}
+body:has(#culture:target) li a[href="#culture"] {
+  color: orange;
+}
+body:has(#opinion:target) li a[href="#opinion"] {
+  color: orange;
+}
+body:has(#tutorials:target) li a[href="#tutorials"] {
+  color: orange;
+}
+/* footer target  */
 .test1 {
   background-color: aquamarine;
 }
@@ -1244,19 +1269,79 @@ input::placeholder {
 .test7 {
   background-color: rgb(119, 24, 179);
 }
-body:has(#home:target) li a[href="#home"]
-{
-   color:orange;
+/* dark light mode style */
+.dark-light-mode-container {
+  position: relative;
+  width: 50px;
+  height: 50px;
 }
-body:has(#latest-articles:target) li a[href="#latest-articles"]
-{
-  color:orange;
+.dark-light-mode-container .fa-sun,
+.dark-light-mode-container .fa-moon {
+  position: absolute;
+  font-size: 30px;
+  top: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
 }
-body:has(#AUTHORS:target) li a[href="#AUTHORS"]
-{
-  color:orange;
+.dark-light-mode-container .fa-sun {
+  color: rgb(250, 218, 56);
+  display: none;
 }
-body:has(#COMMUNITY:target) li a[href="#COMMUNITY"]
-{
-  color:orange;
+/* if moon checked - none for the moon -> block for sun */
+.dark-light-mode-container:has(input[type="checkbox"]:checked) .fa-moon {
+  display: none;
+}
+.dark-light-mode-container:has(input[type="checkbox"]:checked) .fa-sun {
+  display: block;
+}
+body:has(.dark-light-mode-container input[type="checkbox"]:checked) {
+  background-color: #000000;
+  color: white;
+}
+body:has(.dark-light-mode-container input[type="checkbox"]:checked)
+  .section1
+  .navebar {
+  background-color: #000000;
+  color: white;
+  border: 1px solid orange;
+}
+body:has(.dark-light-mode-container input[type="checkbox"]:checked) .section1 {
+  background-color: #000000;
+  color: white;
+}
+body:has(.dark-light-mode-container input[type="checkbox"]:checked)
+  .section1
+  .trending-style
+  p {
+  color: white;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+body:has(.dark-light-mode-container input[type="checkbox"]:checked) .square1,
+.square2,
+.square3,
+.square4,
+.square5 {
+  opacity: 0.5;
+}
+body:has(.dark-light-mode-container input[type="checkbox"]:checked)
+  .section1
+  .header-p,
+body:has(.dark-light-mode-container input[type="checkbox"]:checked)
+  .section2
+  .right-top-card,
+body:has(.dark-light-mode-container input[type="checkbox"]:checked)
+  .section2
+  .right-buttom-card,
+body:has(.dark-light-mode-container input[type="checkbox"]:checked)
+  .section2
+  .cards,
+body:has(.dark-light-mode-container input[type="checkbox"]:checked) .btn2,
+body:has(.dark-light-mode-container input[type="checkbox"]:checked) .btn4
+,body:has(.dark-light-mode-container input[type="checkbox"]:checked) .card-btn {
+  background-color: #000000;
+  color: white;
+  box-shadow: none;
+  border: 2px solid white;
 }
