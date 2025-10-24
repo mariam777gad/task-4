@@ -30,6 +30,20 @@
   </head>
 
   <body>
+    <div class="navebar-side-list ">
+      <div class="close-icon">
+        <h2>Menu</h2>
+        <label for="close-buttom"><i class="fa-solid fa-xmark"></i></label>
+        <input type="checkbox" id="close-buttom" hidden>
+      </div>
+      <ul>
+        <li><a href="#home2">HOME</a></li>
+        <li><a href="#latest-articles2">LATEST ARTICLES</a></li>
+        <li><a href="#AUTHORS2">AUTHORS</a></li>
+        <li><a href="#COMMUNITY2">COMMUNITY</a></li>
+      </ul>
+      <button><i class="fa-solid fa-rocket"></i> SUBSCRIBE NOW</button>
+    </div>
     <div class="section1" id="home">
       <div class="container">
         <div class="navebar">
@@ -50,17 +64,24 @@
           <div class="btn1">
             <button>SUBSCRIBE NOW</button>
           </div>
-          <div class="dark-light-mode-container ">
-            <label for="light"><i class="fa-solid fa-sun"></i></label>
-            <label for="light"><i class="fa-solid fa-moon"></i></label>
+          <!-- light / dark mode css -->
+          <div class="dark-light-mode-container md-50">
+            <label for="light"><i class="fa-solid fa-sun md-50"></i></label>
+            <label for="light"><i class="fa-solid fa-moon md-50"></i></label>
             <input type="checkbox" hidden id="light" />
           </div>
 
-          <!-- light / dark mode css -->
-          <div class="mobile-icon">
+          <!-- sidebar-icon -->
+          <label for="list-icon">
+            <div class="mobile-icon">
+              <i class="fa-solid fa-list #light"></i>
+            </div>
+          </label>
+          <input type="checkbox" id="list-icon" hidden />
+
+          <!-- <div class="mobile-icon">
             <i class="fa-solid fa-list #light"></i>
-            <!-- <input type="checkbox" style="visibility: hidden;" id="light"> -->
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -79,7 +100,7 @@
                 >THOUGHTS</span
               ><br /><span class="header-text-blue">BOLD IDEAS</span>
             </h1>
-            <div class="hhh">
+            <div>
               <p class="header-p">
                 Raw, unfiltered content about tech, design, and culture. No
                 sugar-coating, just pure truth that hits different.
@@ -249,11 +270,13 @@
               Destroying conventional wisdom one article at a time. 10+ years
               fighting the good fight against boring design and corporate BS.
             </p>
-            <ul>
-              <li class="twitter"><i class="fa-brands fa-twitter"></i></li>
-              <li class="insta"><i class="fa-brands fa-instagram"></i></li>
-              <li class="linkedin"><i class="fa-brands fa-linkedin"></i></li>
-            </ul>
+            <div class="ul-section3">
+              <ul >
+                <li class="twitter"><i class="fa-brands fa-twitter"></i></li>
+                <li class="insta"><i class="fa-brands fa-instagram"></i></li>
+                <li class="linkedin"><i class="fa-brands fa-linkedin"></i></li>
+              </ul>
+            </div>
           </div>
           <div class="three-cards-contant card2 md-100 sm-50 md-50 lg-50 xl-33">
             <p class="lead">LEAD</p>
@@ -392,10 +415,10 @@
         </div>
       </div>
     </div>
-    <div class="footer p-y design" id="design">
-      <div class="container">
-        <div class="footer-first-row">
-          <div class="footer-card1 md-100">
+    <div class="footer p-y design" id="tech">
+      <div class="container" id="design">
+        <div class="footer-first-row" id="culture">
+          <div class="footer-card1 md-100" id="opinion">
             <div class="footer-header">
               <i class="fa-solid fa-pen-nib"></i>
               <h2>THE UX REVIEW</h2>
@@ -406,7 +429,7 @@
             </p>
           </div>
           <div class="footer-card2 md-50">
-            <h3>CATEGORIES</h3>
+            <h3 id="tutorials">CATEGORIES</h3>
             <div class="categories-list">
               <ul>
                 <li><a href="#tech">TECH</a></li>
@@ -428,15 +451,16 @@
           </div>
         </div>
         <hr style="height: 4px; background-color: white" />
-        <div class="footer-second-row">
-          <p>© 2025 The UX Review. ALL RIGHTS RESERVED. STAY BRUTAL.</p>
-          <ul>
-            <li><a href="#">PRIVACY POLICY</a></li>
-            <li><a href="#">TERMS OF USE</a></li>
-            <li><a href="#">COOKIE POLICY</a></li>
+        <div class="footer-second-row" id="privace">
+          <p id="terms">
+            © 2025 The UX Review. ALL RIGHTS RESERVED. STAY BRUTAL.
+          </p>
+          <ul id="cookie">
+            <li><a href="#privace">PRIVACY POLICY</a></li>
+            <li><a href="#terms">TERMS OF USE</a></li>
+            <li><a href="#cookie">COOKIE POLICY</a></li>
           </ul>
         </div>
-        
       </div>
     </div>
   </body>
