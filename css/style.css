@@ -1294,6 +1294,19 @@ body:has(input[type="checkbox"]:checked) .section3 .section-header::after {
   background-color: white;
   color: #000000;
 }
+body:has(.dark-light-mode-container input[type="checkbox"]:checked) .navebar-side-list
+{display: none;
+
+}
+body:has(.dark-light-mode-container input[type="checkbox"]:checked) .fa-list
+{
+  border: 2px solid white;
+}
+body:has(.dark-light-mode-container input[type="checkbox"]:checked),body:has(.list-icon-container input[type="checkbox"]:checked) .navebar-side-list
+{
+  display: block;
+  color: #000000;
+}
 .test1 {
   background-color: aquamarine;
 }
