@@ -36,7 +36,7 @@ ul li a {
   width: 250px;
   height: 100vh;
   background-color: #ffffff;
-  z-index: 444;
+  z-index: 40;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -103,13 +103,35 @@ ul li a {
   transform: translate(2px, 5px);
   box-shadow: none;
 }
-body:has(.navebar input[type="checkbox"]:checked) .navebar-side-list {
+body:has(.navebar input[type="checkbox"]:checked) .navebar-side-list,
+body:has(.navebar input[type="checkbox"]:checked) .blur {
   display: block;
 }
-body:has(.navebar-side-list  input[type="checkbox"]:checked) .navebar-side-list {
+body:has(.navebar-side-list input[type="checkbox"]:checked) .navebar-side-list {
   display: none;
 }
-/* sidebar-style */  /* sidebar-style */
+body:has(.dark-light-mode-container input[type="checkbox"]:checked) .blur {
+  display: none;
+}
+body:has(.dark-light-mode-container input[type="checkbox"]:checked),
+body:has(.list-icon-container input[type="checkbox"]:checked) .blur
+{
+  display: block;
+}
+.blur {
+  background-color: rgba(0, 0, 0, 0.515);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  backdrop-filter: blur(5px);
+  display: none;
+}
+/* sidebar-style */ /* sidebar-style */
 /* navebar */ /* navebar */ /* navebar */
 
 .navebar {
@@ -1243,7 +1265,7 @@ body:has(.dark-light-mode-container input[type="checkbox"]:checked)
   .navebar {
   background-color: #000000;
   color: white;
-  border: 1px solid orange;
+  border: 2px solid orange;
 }
 body:has(.dark-light-mode-container input[type="checkbox"]:checked) .section1 {
   background-color: #000000;
@@ -1294,17 +1316,82 @@ body:has(input[type="checkbox"]:checked) .section3 .section-header::after {
   background-color: white;
   color: #000000;
 }
-body:has(.dark-light-mode-container input[type="checkbox"]:checked) .navebar-side-list
-{display: none;
-
+body:has(.dark-light-mode-container input[type="checkbox"]:checked)
+  .navebar-side-list {
+  display: none;
 }
-body:has(.dark-light-mode-container input[type="checkbox"]:checked) .fa-list
-{
+body:has(.dark-light-mode-container input[type="checkbox"]:checked),
+body:has(.list-icon-container input[type="checkbox"]:checked)
+  .navebar-side-list {
+  display: block;
+  color: #000000;
+}
+body:has(.dark-light-mode-container input[type="checkbox"]:checked) .fa-list {
   border: 2px solid white;
 }
-body:has(.dark-light-mode-container input[type="checkbox"]:checked),body:has(.list-icon-container input[type="checkbox"]:checked) .navebar-side-list
-{
-  display: block;
+body:has(.dark-light-mode-container input[type="checkbox"]:checked) .section1,
+.section2,
+.section3,
+.section4 {
+  border: 5px solid white;
+}
+body:has(.dark-light-mode-container input[type="checkbox"]:checked) .section4 {
+  color: white;
+}
+body:has(.dark-light-mode-container input[type="checkbox"]:checked)
+  .section4
+  .inner-card-info
+  h3 {
+  color: orange;
+}
+body:has(.dark-light-mode-container input[type="checkbox"]:checked)
+  .section4
+  .left-card-section4 {
+  background-color: white;
+  color: #000000;
+}
+body:has(.dark-light-mode-container input[type="checkbox"]:checked)
+  .section4
+  .right-card-section4
+  .main-p {
+  border: 2px solid white;
+}
+body:has(.dark-light-mode-container input[type="checkbox"]:checked)
+  .section2
+  .card-header
+  p {
+  border: 2px solid white;
+}
+body:has(.dark-light-mode-container input[type="checkbox"]:checked)
+  .section2
+  .left-cards
+  .cards
+  .tech-style,
+.left-cards .cards .design-style,
+.left-cards .cards .culture-style {
+  border: none;
+  box-shadow: none;
+}
+body:has(.dark-light-mode-container input[type="checkbox"]:checked)
+  .section2
+  .left-cards
+  .cards,
+.section2 .right-card .right-top-card {
+  background-color: white;
+  color: #000000;
+}
+body:has(.dark-light-mode-container input[type="checkbox"]:checked)
+  .section2
+  .right-card
+  .right-top-card {
+  background-color: white;
+  color: #000000;
+}
+body:has(.dark-light-mode-container input[type="checkbox"]:checked)
+  .section2
+  .right-card
+  .right-buttom-card {
+  background-color: white;
   color: #000000;
 }
 .test1 {
